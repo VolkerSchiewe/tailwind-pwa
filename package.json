@@ -1,0 +1,21 @@
+{
+  "name": "tailwind-pwa",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^11.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "purgecss": "^2.1.0",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "scripts": {
+    "start": "yarn postcss -w & yarn serve",
+    "serve": "serve -s public",
+    "postcss": "postcss -o public/index.css src/*.css"
+  }
+}
