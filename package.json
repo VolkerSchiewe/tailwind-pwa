@@ -6,9 +6,12 @@
     "serve": "^11.3.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.5",
+    "cssnano": "^4.1.10",
     "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
     "purgecss": "^2.1.0",
     "tailwind": "^4.0.0",
     "tailwindcss": "^1.2.0"
@@ -16,6 +19,7 @@
   "scripts": {
     "start": "yarn postcss -w & yarn serve",
     "serve": "serve -s public",
-    "postcss": "postcss -o public/index.css src/*.css"
+    "postcss": "postcss src/*.css -o public/index.css",
+    "build": "env NODE_ENV=production yarn postcss"
   }
 }
